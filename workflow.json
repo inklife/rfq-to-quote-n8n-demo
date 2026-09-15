@@ -1,0 +1,102 @@
+{
+  "name": "RFQ proof - PDF to AED Excel draft",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "nodes": [
+    {
+      "id": "start",
+      "name": "Run synthetic example",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "input",
+      "name": "Synthetic PDF and approved data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        250,
+        0
+      ],
+      "parameters": {
+        "jsCode": "return [{ json: {\"pdf_base64\": \"JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUgo+PgplbmRvYmoKMiAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YyIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNCAwIG9iago8PAovQ29udGVudHMgOCAwIFIgL01lZGlhQm94IFsgMCAwIDU5NS4yNzU2IDg0MS44ODk4IF0gL1BhcmVudCA3IDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago1IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgNyAwIFIgL1R5cGUgL0NhdGFsb2cKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0F1dGhvciAoXChhbm9ueW1vdXNcKSkgL0NyZWF0aW9uRGF0ZSAoRDoyMDAwMDEwMTAwMDAwMCswMCcwMCcpIC9DcmVhdG9yIChcKHVuc3BlY2lmaWVkXCkpIC9LZXl3b3JkcyAoKSAvTW9kRGF0ZSAoRDoyMDAwMDEwMTAwMDAwMCswMCcwMCcpIC9Qcm9kdWNlciAoUmVwb3J0TGFiIFBERiBMaWJyYXJ5IC0gXChvcGVuc291cmNlXCkpIAogIC9TdWJqZWN0IChcKHVuc3BlY2lmaWVkXCkpIC9UaXRsZSAoU3ludGhldGljIFJGUSBpbnB1dCkgL1RyYXBwZWQgL0ZhbHNlCj4+CmVuZG9iago3IDAgb2JqCjw8Ci9Db3VudCAxIC9LaWRzIFsgNCAwIFIgXSAvVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjggMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMTA3MQo+PgpzdHJlYW0KR2F0JWJnSlpjWyY7S1pGJ1JORDVOUj5rUkkyTitZMFBMcDU5S1NnJTM0O15hJnQ6cFM7cjU3U1pbcDFAQSYrTF41QWdDYihPN0dAXVAuKyI/Mz9eT0UtYiosMSdqNDNLZC5fMV8qcD9bMVNRYFUuIVY/UHBqVi9dJDROIk9PVC02WD4yI2prS2tqQiRKR01cYWBlbS9gJjtQO2dAbSFIQ2pRPyJPOj5vWiowYiYlYjorJWotUmJXU2YyXD50Q24xQlRrZFYuVllZR1hpODNHPShHN14rNDtlbDNQSlI2UlMyOilQKCk6KjZuS1E8PV4wL0FHUHBaNXJqQ1xSK1BcMS0vKGUtXixUSihadCMhVzpgTD1eXi0tYGFoPWplQ2dIXiRkYCQ1aCssI2tBZisuPGdHPCVYQSNFMjlmIzxxKjQ7K0ZnQnBNX2ReJFksM24uOU89J0ZOKWRgYFVnO0lcMUJsXToqPjZcQTklPmlvQGFAaTBIXXRLYlheTEpJLWVxJV8tZjxMQTJcPk1laGhdVi5JXkw2M18nNm1DIWYhaTFTKFEmb0JuQC5gPTZwU0I/PCVpJjgtaCdWUyNRSVh1OjomKyxVOVclcy1GI14+Oz5ZZEg4ajlKVFlbRjtmLWoxXjQtRUE9VHFgTjlmNFsqMlAoSGY8YFcuP2hrSlguMkVQZDhdN0ZeM1FqbzlXLDhaUkJOISglLS1fVytIU1cxc08iWTc2cD5kUlReTGZhR2hEUzlLSzMiaUNNSVkvKl5RUElAKHAxbixgMlAoTmg8bmBtZ3FlS2JgOUBvSS5DUkAvOSUvSSozY1c5cVUhZWZBbklwTTRvZ3VoNStZZktnZFlPVl9vSSgzWmhRWi1AJDhPXzhpSkA8RFhPNz42OGU2Ji9YXEV1YyU/Kyo/MF1wJURGY0ZTQ0htcDYvZ1g3W0Qrbm9bKDBTVVJlSXBSNjBfNTBcNyJCUkhULlhhOjpzaClmLlA8LkpVPS9tZC1faWVXNFYqNC91YkI0JkRYUyMlPFZIYHQqUVBXQGBiV1Ikcl81MiE5c2BIOlZWSXQqTSFRWz9yIV8zKjZkRzlHYUpKaHRFa0hdNWJDU0wpa0skYUtLNkpwRj1SZy9FXnRRbiVyUUFNSlNeV3AkRmg8R0E/SEsxMlVQVDNCY148T1xtMzxiN2c/MWgrZ0daSSozXG5PRFB1YFtnciFuIjAqTWNKbV1bZ2hrRCUucDBKWFhDSkdAY0AmJUdURE9LV0BnPDY9LmVaVztpTFNnKnJeO2pIRmQ/bz0/SG8+IichYDNhKVo8R1htcE06PkdSVVBTTjtAMiw9NkdwU01COSsrRU0rMUNQL3AkJmk9cio6XkZEKWpFU3NJb25USkVKMiVJI1RgPVs+OG9kPm45cilQcj4nJ0lyUCRgIWB1MjZvYX4+ZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgOQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwNjEgMDAwMDAgbiAKMDAwMDAwMDEwMiAwMDAwMCBuIAowMDAwMDAwMjA5IDAwMDAwIG4gCjAwMDAwMDAzMjEgMDAwMDAgbiAKMDAwMDAwMDUyNCAwMDAwMCBuIAowMDAwMDAwNTkyIDAwMDAwIG4gCjAwMDAwMDA4NzggMDAwMDAgbiAKMDAwMDAwMDkzNyAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9JRCAKWzxlMWY4MjY1NzVhZWQ4MmI2N2I1YTk5MjJhNDkwMWVmNj48ZTFmODI2NTc1YWVkODJiNjdiNWE5OTIyYTQ5MDFlZjY+XQolIFJlcG9ydExhYiBnZW5lcmF0ZWQgUERGIGRvY3VtZW50IC0tIGRpZ2VzdCAob3BlbnNvdXJjZSkKCi9JbmZvIDYgMCBSCi9Sb290IDUgMCBSCi9TaXplIDkKPj4Kc3RhcnR4cmVmCjIwOTkKJSVFT0YK\", \"catalogue\": [{\"code\": \"SW-A01\", \"description\": \"Wall switch\", \"description_ar\": \"مفتاح حائط\", \"unit\": \"EA\"}, {\"code\": \"CL-B02\", \"description\": \"Cable clip\", \"description_ar\": \"مشبك كابل\", \"unit\": \"EA\"}, {\"code\": \"CB-C03\", \"description\": \"Cable metre\", \"description_ar\": \"كابل بالمتر\", \"unit\": \"M\"}, {\"code\": \"FZ-D04\", \"description\": \"Fuse holder\", \"description_ar\": \"حامل مصهر\", \"unit\": \"EA\"}], \"price_list\": {\"version\": \"SYNTHETIC-AED-2026-09-15\", \"currency\": \"AED\", \"items\": [{\"code\": \"SW-A01\", \"unit\": \"EA\", \"price\": \"12.50\"}, {\"code\": \"CL-B02\", \"unit\": \"EA\", \"price\": \"1.00\"}, {\"code\": \"CB-C03\", \"unit\": \"M\", \"price\": \"1.00\"}]}} }];"
+      }
+    },
+    {
+      "id": "quote",
+      "name": "Extract match and render",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        500,
+        0
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8795/quote",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json }}",
+        "options": {
+          "timeout": 20000
+        }
+      }
+    },
+    {
+      "id": "output",
+      "name": "Excel file and review summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        750,
+        0
+      ],
+      "parameters": {
+        "jsCode": "const {xlsx_base64, ...summary} = $input.first().json; return [{json: summary, binary: {data: {data: xlsx_base64, mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', fileName: 'quote-draft.xlsx'}}}];"
+      }
+    }
+  ],
+  "connections": {
+    "Run synthetic example": {
+      "main": [
+        [
+          {
+            "node": "Synthetic PDF and approved data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Synthetic PDF and approved data": {
+      "main": [
+        [
+          {
+            "node": "Extract match and render",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract match and render": {
+      "main": [
+        [
+          {
+            "node": "Excel file and review summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "id": "rfq-proof-20260915"
+}

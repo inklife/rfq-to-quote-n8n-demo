@@ -1,0 +1,127 @@
+{
+  "status": "DRAFT",
+  "currency": "AED",
+  "price_version": "SYNTHETIC-AED-2026-09-15",
+  "rows": [
+    {
+      "line": "1",
+      "code": "SW-A01",
+      "description": "Wall switch",
+      "quantity": "2",
+      "unit": "EA",
+      "source": "PDF p1, table row 2",
+      "status": "MATCHED",
+      "reasons": [],
+      "price": "12.50",
+      "amount": "25.00",
+      "description_ar": "مفتاح حائط"
+    },
+    {
+      "line": "2",
+      "code": "CL-B02",
+      "description": "Cable clip",
+      "quantity": "0.145",
+      "unit": "EA",
+      "source": "PDF p1, table row 3",
+      "status": "MATCHED",
+      "reasons": [],
+      "price": "1.00",
+      "amount": "0.15",
+      "description_ar": "مشبك كابل"
+    },
+    {
+      "line": "3",
+      "code": "CB-C03",
+      "description": "Cable metre",
+      "quantity": "1.005",
+      "unit": "M",
+      "source": "PDF p1, table row 4",
+      "status": "MATCHED",
+      "reasons": [],
+      "price": "1.00",
+      "amount": "1.01",
+      "description_ar": "كابل بالمتر"
+    },
+    {
+      "line": "4",
+      "code": "SW-A01",
+      "description": "Main breaker",
+      "quantity": "1",
+      "unit": "EA",
+      "source": "PDF p1, table row 5",
+      "status": "REVIEW",
+      "reasons": [
+        "Description differs from catalogue; human approval required"
+      ],
+      "price": null,
+      "amount": null,
+      "description_ar": "مفتاح حائط"
+    },
+    {
+      "line": "5",
+      "code": "FZ-D04",
+      "description": "Fuse holder",
+      "quantity": "3",
+      "unit": "EA",
+      "source": "PDF p1, table row 6",
+      "status": "REVIEW",
+      "reasons": [
+        "Missing approved price"
+      ],
+      "price": null,
+      "amount": null,
+      "description_ar": "حامل مصهر"
+    },
+    {
+      "line": "6",
+      "code": "NO-SUCH",
+      "description": "Unknown item",
+      "quantity": "1",
+      "unit": "EA",
+      "source": "PDF p1, table row 7",
+      "status": "REVIEW",
+      "reasons": [
+        "Unknown code"
+      ],
+      "price": null,
+      "amount": null,
+      "description_ar": ""
+    },
+    {
+      "line": "7",
+      "code": "SW-A01",
+      "description": "Wall switch",
+      "quantity": "1",
+      "unit": "BOX",
+      "source": "PDF p1, table row 8",
+      "status": "REVIEW",
+      "reasons": [
+        "Unit missing or does not match catalogue"
+      ],
+      "price": null,
+      "amount": null,
+      "description_ar": "مفتاح حائط"
+    },
+    {
+      "line": "8",
+      "code": "CL-B02",
+      "description": "Cable clip",
+      "quantity": "0",
+      "unit": "EA",
+      "source": "PDF p1, table row 9",
+      "status": "REVIEW",
+      "reasons": [
+        "Invalid or non-positive quantity"
+      ],
+      "price": null,
+      "amount": null,
+      "description_ar": "مشبك كابل"
+    }
+  ],
+  "source_issues": [],
+  "review_count": 5,
+  "matched_subtotal": "26.16",
+  "complete_total": null,
+  "policy": "Exact normalized code + description + unit; no substitutions. Line ROUND_HALF_UP to AED 0.01. No tax, discounts or currency conversion.",
+  "pdf_sha256": "9ea7c4a4b9d8b0c794437394a54bad9c11d765a3fc85896a719ecf3af86f6576"
+}

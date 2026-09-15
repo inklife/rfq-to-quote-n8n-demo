@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "finished": true,
+  "mode": "cli",
+  "startedAt": "2026-09-15T14:48:15.717Z",
+  "stoppedAt": "2026-09-15T14:48:16.663Z",
+  "lastNode": "Excel file and review summary",
+  "nodes": {
+    "Extract match and render": "success",
+    "Synthetic PDF and approved data": "success",
+    "Excel file and review summary": "success",
+    "Run synthetic example": "success"
+  },
+  "output": {
+    "status": "DRAFT",
+    "review_count": 5,
+    "matched_subtotal": "26.16",
+    "complete_total": null,
+    "rows": 8,
+    "fileName": "quote-draft.xlsx"
+  }
+}
